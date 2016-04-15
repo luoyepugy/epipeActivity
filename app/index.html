@@ -1,0 +1,105 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>采购宝后台管理系统</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="-webkit-tap-highlight" content="no"/>
+    <meta content="IE=10" http-equiv="x-ua-compatible"/>
+    
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+    <!-- build:css(.) styles/vendor.css -->
+    <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <!-- bower:css -->
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:css(.tmp) styles/main.css -->
+    <link rel="stylesheet" href="css/common.css">
+    <!-- endbuild -->
+  </head>
+  <body ng-app="myApp">
+    <!--[if lte IE 8]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+    
+
+    <div class="header">
+        <div class="pl15">优管网<span class="hidde-xxs">-中国管道产业互联网第一平台</span></div>
+        <div class="fr"><a class="mr15" href="http://www.epipe.cn">网站首页</a><span class="hidde-xxs">4000-948-666</span></div>
+    </div>
+    <div class="banner">
+        <img class="img-responsive" src="images/bg.jpg" alt="banner图">
+    </div>
+    <!-- 主体内容 -->
+    <div class="content container">
+        <h3>活动介绍</h3>
+        <p class="f16 lh180">随着国家对地下管廊、海绵城市、综合管廊、以及城市化建设的推进，国内管材业发展呈现强劲增长态势。以HDPE为代表的"以塑代钢"管道淋漓尽致地展示其卓越性能。为推动HDPE管道的品牌知名度，推荐优质单品，树立行业典范显得尤为重要。HDPE管道十大品牌旨在表彰2016年度在产品质量、品牌知名度、品牌美誉度、市场份额、营销状况、企业发展速度等方面的综合实力在管材管道领域排行靠前的企业。</p>
+        <div class="title">活动说明</div>
+        <ul class="ruleList">
+            <li>1.点击“我要报名”，参与活动，联系客服提供logo,品牌资质就能参与评选。</li>
+            <li>2.参加的行业生产厂家以及一线代理商必须要有良好的品牌意识。</li>
+            <li>3.活动设置HDPE双壁波纹管10名、HDPE中空壁缠绕管10名、HDPE塑钢缠绕管10名、hdpe钢丝网骨架复合管10名、HDPE钢带增强螺旋波纹管10名 ，一个生产厂家可以参加多个行业品牌的参选。</li>
+            <li>4.活动评比期间一天内IP只能投一次，每次有一次投票机会，严禁刷票。</li>
+            <li>5.活动评选的方式“专家+网络投票，1个专家=500网络投票。</li>
+            <li>6.本活动最终解释权归优管网所有。</li>
+        </ul>
+        <div class="title">支持媒体</div>
+        <img src="images/parter.jpg" alt="支持媒体" />
+        <div class="button join-btn"><a class="db" target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=123456&site=qq&menu=yes">我要报名</a></div>
+        <!-- 参与企业 -->
+        <div class="company row" ng-controller="indexCtrl">
+            <h4 class="col-xs-12">参选企业</h4>
+            <ul class="tab col-xs-12">
+                <li ng-repeat="item in tabList" ng-class="{true:'active', false:''}[tabActive[$index]]" ng-click="filter(item.type, $index)">{{item.name}}</li>
+            </ul>
+            <div class="col-xs-12">
+                <ul class="itemList row">
+                    <li class="col-xs-6 col-sm-4 col-md-3" ng-repeat="item in itemList">
+                        <div>
+                            <input type="hidden" ng-model="item.Id" value="{{item.Id}}">
+                            <img src="images/company-logo.jpg" ng-src="{{item.ImageUrl}}" alt="企业logo" />
+                            <p>{{item.Name}}</p>
+                            <p class="descrip">{{item.Description}}</p>
+                            <p><span class="red mr5">{{item.VoteNum}}</span>票</p>
+                            <p>
+                                <span class="button voting" ng-if="item.State" ng-click="vote($index)">投票</span>
+                                <span class="button voted" ng-if="!item.State">已结束</span>
+                            </p>
+                        </div>
+                    </li> 
+                </ul>
+            </div>
+        </div>
+        <!-- /参与企业 -->
+        <!-- 合作伙伴 -->
+        <div class="partner row">
+            <h4><span class="mr15 gray">————</span>合作伙伴<span class="ml15 gray">————</span></h4>
+            <div class="col-xs-6 col-sm-3"><a href="#"><img src="images/link-1.jpg" alt="合作伙伴"></a></div>
+            <div class="col-xs-6 col-sm-3"><a href="#"><img src="images/link-2.jpg" alt="合作伙伴"></a></div>
+            <div class="col-xs-6 col-sm-3"><a href="#"><img src="images/link-3.jpg" alt="合作伙伴"></a></div>
+            <div class="col-xs-6 col-sm-3"><a href="#"><img src="images/link-4.jpg" alt="合作伙伴"></a></div>
+            <div class="col-xs-6 col-sm-3"><a href="#"><img src="images/link-5.jpg" alt="合作伙伴"></a></div>
+            <div class="col-xs-6 col-sm-3"><a href="#"><img src="images/link-6.jpg" alt="合作伙伴"></a></div>
+            <div class="col-xs-6 col-sm-3"><a href="#"><img src="images/link-7.jpg" alt="合作伙伴"></a></div>
+            <div class="col-xs-6 col-sm-3"><a href="#"><img src="images/link-8.jpg" alt="合作伙伴"></a></div>
+        </div>
+        <!-- /合作伙伴 -->
+    </div>
+    <!-- 主体内容 -->
+
+    
+    <!-- build:js(.) scripts/vendor.js -->
+    <!-- bower:js -->
+    <!-- // <script src="../bower_components/jquery/dist/jquery.min.js"></script> -->
+    <script src="../bower_components/angular/angular.min.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:js({.tmp,app}) scripts/scripts.js -->
+    <script src="js/index.js"></script>
+    <!-- endbuild -->
+</body>
+</html>

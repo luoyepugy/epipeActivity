@@ -1,0 +1,122 @@
+
+{	
+	"Success": true,
+	"StatusCode": 200,
+	"ErrorMessage": null,
+	"Data": {
+		"type1": [
+			{
+				"Id": 11,
+				"ImageUrl": "./images/company-logo.jpg",
+				"Name": "雅兴塑料",
+				"Description": "塑料主机/孔昂冲快递",
+				"VoteNum": 210,
+				"State": true
+			},
+			{
+				"Id": 11,
+				"ImageUrl": "./images/company-logo.jpg",
+				"Name": "雅兴塑料",
+				"Description": "塑料主机/孔昂冲快递dfasfdgeedgfdfdafdf",
+				"VoteNum": 210,
+				"State": false
+			},
+			{
+				"Id": 11,
+				"ImageUrl": "./images/company-logo.jpg",
+				"Name": "雅兴塑料",
+				"Description": "塑料主机/孔昂冲快递",
+				"VoteNum": 210,
+				"State": true
+			},
+			{
+				"Id": 11,
+				"ImageUrl": "./images/company-logo.jpg",
+				"Name": "雅兴塑料",
+				"Description": "塑料主机/孔昂冲快递",
+				"VoteNum": 210,
+				"State": false
+			},
+			{
+				"Id": 11,
+				"ImageUrl": "./images/company-logo.jpg",
+				"Name": "雅兴塑料",
+				"Description": "塑料主机/孔昂冲快递",
+				"VoteNum": 210,
+				"State": true
+			},
+			{
+				"Id": 11,
+				"ImageUrl": "./images/company-logo.jpg",
+				"Name": "雅兴塑料",
+				"Description": "塑料主机/孔昂冲快递",
+				"VoteNum": 210,
+				"State": false
+			}
+		],
+		"type2": [
+			{
+				"Id": 11,
+				"ImageUrl": "./images/company-logo.jpg",
+				"Name": "雅兴塑料",
+				"Description": "塑料主机/孔昂冲快递",
+				"VoteNum": 210,
+				"State": true
+			},
+			{
+				"Id": 11,
+				"ImageUrl": "./images/company-logo.jpg",
+				"Name": "雅兴塑料",
+				"Description": "塑料主机/孔昂冲快递dfasfdgeedgfdfdafdf",
+				"VoteNum": 210,
+				"State": false
+			},
+			{
+				"Id": 11,
+				"ImageUrl": "./images/company-logo.jpg",
+				"Name": "雅兴塑料",
+				"Description": "塑料主机/孔昂冲快递",
+				"VoteNum": 210,
+				"State": true
+			}
+		],
+		"type3": [
+			{
+				"Id": 11,
+				"ImageUrl": "./images/company-logo.jpg",
+				"Name": "雅兴塑料",
+				"Description": "塑料主机/孔昂冲快递",
+				"VoteNum": 210,
+				"State": true
+			}
+		],
+		"type4": [
+			{
+				"Id": 11,
+				"ImageUrl": "./images/company-logo.jpg",
+				"Name": "雅兴塑料",
+				"Description": "塑料主机/孔昂冲快递",
+				"VoteNum": 210,
+				"State": true
+			},
+			{
+				"Id": 11,
+				"ImageUrl": "./images/company-logo.jpg",
+				"Name": "雅兴塑料",
+				"Description": "塑料主机/孔昂冲快递",
+				"VoteNum": 210,
+				"State": true
+			}
+		],
+		"type5": [
+			{
+				"Id": 11,
+				"ImageUrl": "./images/company-logo.jpg",
+				"Name": "雅兴塑料",
+				"Description": "塑料主机/孔昂冲快递",
+				"VoteNum": 210,
+				"State": true
+			}
+		]
+	}
+}
