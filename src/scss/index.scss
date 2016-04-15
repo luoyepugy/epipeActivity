@@ -1,0 +1,63 @@
+
+@import 'custom/custom.scss';
+@import 'custom/mixin.scss';
+
+body {
+  background: url(../images/bg.png) repeat;
+}
+// 头部
+.header { 
+  background: url(../images/header-bg.jpg) repeat #000;
+  @include inside-center(100%, 65px);
+}
+// 标题
+.title {
+  text-align: center;
+  margin: 25px auto;
+  font-size: 28px;
+  color: $main-orange;
+  font-family: "微软雅黑";
+}
+// 内容
+.content {
+  margin: 0 auto;
+  @include position-center(1024px);
+}
+.purchaser,
+.vendor{ 
+  margin: 95px 0 0 30px;
+  display: inline-block;
+  overflow: hidden;
+  img {
+    @include size(375px,628px);
+  }
+}
+// 采购方
+.purchaser {
+  margin-right: 140px;
+  @include size(410px,700px);
+}
+// 供应商
+.vendor {
+  @include size(410px,700px);
+}
+
+// 手机外壳
+.iphone-wrap {
+  @include position(absolute, up);
+  @include size(430px, 850px);
+}
+.iphone-wrap2 {
+  @include position-basic(absolute, right, 10px, top, 0);
+  @include size(430px, 850px);
+}
+
+// 颜色
+@include color('gray_light', '#bbb');
+@include color('gray_mid', '#343434');
+@include color('green', '#24ccab');
+@include color('orange', '#ff6c21');
+@include color('blue', '#1baee4');
+@include color('red');
+@include color('white');
+@include color('black');
