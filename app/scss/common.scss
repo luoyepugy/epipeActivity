@@ -93,8 +93,15 @@
         &>p {
             margin: 15px 0;
         }
+        &>.name {
+            height: 1.5em;
+            overflow: hidden;
+
+        }
         &>.descrip {
-            height: 60px;
+            height: 3em;
+            overflow: hidden;
+            margin-bottom: 20px;
         }
     }
     .voting,.voted {
@@ -120,6 +127,16 @@
     }
 }
 
+.error {
+    font-size: 16px;
+    @include position-basic(fixed, top, 45%, left, 45%);
+    padding: 10px 15px;
+    background: rgb(177,0,0);
+    color: #fff;
+    border-radius: 8px;
+    border: 1px solid rgba(177,0,0,.8);
+    box-shadow: 0 0 8px rgba(177,0,0,.6);
+}
 
 // 颜色
 @include color('gray', "#bcbcbc");

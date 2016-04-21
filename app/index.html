@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>采购宝后台管理系统</title>
+    <title>2016HDPE管道十大品牌评选活动</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -34,7 +34,7 @@
         <img class="img-responsive" src="images/bg.jpg" alt="banner图">
     </div>
     <!-- 主体内容 -->
-    <div class="content container">
+    <div class="content container" ng-controller="indexCtrl">
         <h3>活动介绍</h3>
         <p class="f16 lh180">随着国家对地下管廊、海绵城市、综合管廊、以及城市化建设的推进，国内管材业发展呈现强劲增长态势。以HDPE为代表的"以塑代钢"管道淋漓尽致地展示其卓越性能。为推动HDPE管道的品牌知名度，推荐优质单品，树立行业典范显得尤为重要。HDPE管道十大品牌旨在表彰2016年度在产品质量、品牌知名度、品牌美誉度、市场份额、营销状况、企业发展速度等方面的综合实力在管材管道领域排行靠前的企业。</p>
         <div class="title">活动说明</div>
@@ -48,9 +48,9 @@
         </ul>
         <div class="title">支持媒体</div>
         <img src="images/parter.jpg" alt="支持媒体" />
-        <div class="button join-btn"><a class="db" target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=123456&site=qq&menu=yes">我要报名</a></div>
+        <div class="button join-btn"><a class="db" target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=525007535&site=qq&menu=yes">我要报名</a></div>
         <!-- 参与企业 -->
-        <div class="company row" ng-controller="indexCtrl">
+        <div class="company row">
             <h4 class="col-xs-12">参选企业</h4>
             <ul class="tab col-xs-12">
                 <li ng-repeat="item in tabList" ng-class="{true:'active', false:''}[tabActive[$index]]" ng-click="filter(item.type, $index)">{{item.name}}</li>
@@ -60,12 +60,12 @@
                     <li class="col-xs-6 col-sm-4 col-md-3" ng-repeat="item in itemList">
                         <div>
                             <input type="hidden" ng-model="item.Id" value="{{item.Id}}">
-                            <img src="images/company-logo.jpg" ng-src="{{item.ImageUrl}}" alt="企业logo" />
-                            <p>{{item.Name}}</p>
+                            <img src="images/company-logo.jpg" ng-src="{{host}}{{item.ImageUrl}}" alt="企业logo" />
+                            <p class="name">{{item.Name}}</p>
                             <p class="descrip">{{item.Description}}</p>
                             <p><span class="red mr5">{{item.VoteNum}}</span>票</p>
                             <p>
-                                <span class="button voting" ng-if="item.State" ng-click="vote($index)">投票</span>
+                                <span class="button voting" ng-class="{true: 'voted', false: ''}[item.HasVote]" ng-if="item.State" ng-click="vote($index)">投票</span>
                                 <span class="button voted" ng-if="!item.State">已结束</span>
                             </p>
                         </div>
@@ -77,18 +77,20 @@
         <!-- 合作伙伴 -->
         <div class="partner row">
             <h4><span class="mr15 gray">————</span>合作伙伴<span class="ml15 gray">————</span></h4>
-            <div class="col-xs-6 col-sm-3"><a href="#"><img src="images/link-1.jpg" alt="合作伙伴"></a></div>
-            <div class="col-xs-6 col-sm-3"><a href="#"><img src="images/link-2.jpg" alt="合作伙伴"></a></div>
-            <div class="col-xs-6 col-sm-3"><a href="#"><img src="images/link-3.jpg" alt="合作伙伴"></a></div>
-            <div class="col-xs-6 col-sm-3"><a href="#"><img src="images/link-4.jpg" alt="合作伙伴"></a></div>
-            <div class="col-xs-6 col-sm-3"><a href="#"><img src="images/link-5.jpg" alt="合作伙伴"></a></div>
-            <div class="col-xs-6 col-sm-3"><a href="#"><img src="images/link-6.jpg" alt="合作伙伴"></a></div>
-            <div class="col-xs-6 col-sm-3"><a href="#"><img src="images/link-7.jpg" alt="合作伙伴"></a></div>
-            <div class="col-xs-6 col-sm-3"><a href="#"><img src="images/link-8.jpg" alt="合作伙伴"></a></div>
+            <div class="col-xs-6 col-sm-3"><img src="images/link-1.jpg" alt="合作伙伴"></div>
+            <div class="col-xs-6 col-sm-3"><img src="images/link-2.jpg" alt="合作伙伴"></div>
+            <div class="col-xs-6 col-sm-3"><img src="images/link-3.jpg" alt="合作伙伴"></div>
+            <div class="col-xs-6 col-sm-3"><img src="images/link-4.jpg" alt="合作伙伴"></div>
+            <div class="col-xs-6 col-sm-3"><img src="images/link-5.jpg" alt="合作伙伴"></div>
+            <div class="col-xs-6 col-sm-3"><img src="images/link-6.jpg" alt="合作伙伴"></div>
+            <div class="col-xs-6 col-sm-3"><img src="images/link-7.jpg" alt="合作伙伴"></div>
+            <div class="col-xs-6 col-sm-3"><img src="images/link-8.jpg" alt="合作伙伴"></div>
         </div>
         <!-- /合作伙伴 -->
+        <div class="error" ng-if="errorShow">{{errorMessage}}</div>
     </div>
     <!-- 主体内容 -->
+    
 
     
     <!-- build:js(.) scripts/vendor.js -->
